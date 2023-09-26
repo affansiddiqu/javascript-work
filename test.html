@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+
+    <script>
+
+        // task 1
+
+        function sum (array) {
+           let sum = 0;
+          for (let i = 0; i<array.length; i++){
+            if (array[i]% 2===0){
+                sum += array[i]
+            }
+          }
+          return sum;
+        } 
+
+        console.log (sum([3,7,2,4,5,6,8,12]))
+
+// task 2
+
+let count = Math.round (Math.random()*99)+1;
+
+if(count % 3==0){
+    console.log("fizz")
+
+}
+
+else if(count % 5==0){
+    console.log("Buzz")
+}
+
+else if(count % 3==0 && count % 5==0){
+    console.log("fizzBuzz")
+}
+
+else{
+    console.log(count)
+}
+
+
+
+// task 3
+ 
+let car = {
+    make: "honda",
+    model : "2011",
+    year : "2012"
+}
+
+for (let i in car){
+    console.log(i + ":" + car[i])
+}
+
+// task 4
+
+let arr = ["r","q","w","d","v","y"]
+
+arr.sort()
+
+console.log(arr)
+
+// task -5
+
+class School {
+    constructor(fname , lname , age){
+        this.fname = fname,
+        this.lname = lname,
+        this.age= age
+    }
+}
+
+
+class College extends School {
+    constructor(fname,lname,age,room){
+        super(fname,lname,age)
+        this.room = "4"
+    }
+}
+
+let school = new School ("proactive" , "school" , 88)
+console.log(school)
+
+
+let college = new  (College) ("foremen" , "college" , 8)
+
+console.log(college)
+
+
+    </script>
+</body>
+</html>
